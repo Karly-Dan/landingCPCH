@@ -25,7 +25,7 @@ input {
   outline: none !important;
   display: inline-grid;
   margin-bottom: 10px;
-  margin-left: 11px;
   color: #686464;
+  max-width: 80%;
 }
 </style>
