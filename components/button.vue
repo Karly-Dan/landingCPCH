@@ -21,9 +21,9 @@ button {
     cursor: pointer;
     border-radius: 3px;
     margin-top: 20px;
-    width: 150px;
-    height: 35px;
-    letter-spacing: -0.4px;
+    width: 185px;
+    height: 45px;
+    letter-spacing: 4.6px;
     padding: 5px;
     text-align: center;
     border-radius: 23.5px;
