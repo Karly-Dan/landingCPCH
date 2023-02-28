@@ -35,9 +35,8 @@
                 <input-vue 
                 placeholderInput="NÚMERO TELEFONICO*"
                 />
-                <label for="cars" style="margin-left: 11px;">¿Con que perfil laboral te identificas?</label>
-                <select name="cars" id="cars">
-                    <option value="" hidden>Selecciona una opción</option>
+                <select name="" id="">
+                    <option value="" hidden>¿Con que perfil laboral te identificas?</option>
                     <option value="">Soy dueño de negocio</option>
                     <option value="">Soy instructor</option>
                     <option value="">Soy docente</option>
@@ -47,7 +46,7 @@
                 <button-vue
                 texto="ENVIAR" 
                 />
-                <p style="margin-bottom: 20px;  margin-left: 11px; color: #201e1e; font-size: 10px;">Tus datos están 100% seguros no los compartiremos con nadie.</p>
+                <p style="margin-bottom: 20px;  margin-left: 11px; color: #201e1e; font-size: 10px; text-align: center;">Tus datos están 100% seguros no los compartiremos con nadie.</p>
             </div>
         </div>
         <footer-vue
