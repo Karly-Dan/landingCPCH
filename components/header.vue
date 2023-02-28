@@ -1,7 +1,7 @@
-<template>
-    <div style="display: flex;">
+<template> 
+    <div style="display: flex; box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;">
         <img src="../assets/logoCPCH.jpeg" alt="img">
-        <p>Centro de Profesionalización de Capital Humano</p>
+        <p style="padding-top: 25px;">Centro de Profesionalización de Capital Humano</p>
     </div>
 </template>
 
