@@ -1,7 +1,7 @@
 <template>
 <div style="display: flex;">
     <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15032.756597558786!2d-99.2887873!3d19.6192096!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d219605c522755%3A0x62eb508444319f8d!2sConde%20Z%C3%A1rate%20%26%20Asociados%20S.C.!5e0!3m2!1ses!2smx!4v1677542298866!5m2!1ses!2smx" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.190995580349!2d-99.2910161857256!3d19.619130639774866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2191273ac7405%3A0x9038e4b1068b2df1!2sCentro%20de%20Profesionalizaci%C3%B3n%20de%20Capital%20Humano!5e0!3m2!1ses-419!2smx!4v1677868003048!5m2!1ses-419!2smx" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <h1 style="width: 3px; background-color: #1187ce; margin-left: 8px;"></h1>
     <div style="padding: 4px;">
