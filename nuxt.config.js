@@ -4,7 +4,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Centro de Profesionalizacón de Capital Humano',
+    title: 'Centro de Profesionalización de Capital Humano',
     htmlAttrs: {
       lang: 'en'
     },
