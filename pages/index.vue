@@ -1,45 +1,60 @@
 <template>
-  <main>
+  <div>
     <header-vue />
     <barra-vue />
-    <div class="contenedor-informativo">
-        <div class="texto-informativo">
-            <h1 class="titulo-informativo">EC0217.01 Impartición de cursos de formación del capital humano de manera presencial grupal</h1>
-            <p>Descripción del Estándar de Competencia:
-                El estándar de competencia impartición de cursos de formación del capital humano de manera presencial y grupal contempla las funciones sustantivas de preparar, conducir y evaluar cursos de capacitación. Preparar la sesión mediante la planeación de la sesión y la comprobación de la existencia y el funcionamiento de los recursos requeridos para la sesión. Conducir la sesión realizando el encuadre, desarrollo y cierre, empleando técnicas instruccionales y grupales que faciliten el proceso de aprendizaje. Evaluar el aprendizaje antes, durante y al final del curso, considerando la satisfacción de los participantes/capacitandos.
-                <br>
-                <br>
-                El presente EC se fundamenta en criterios rectores de legalidad, competitividad, libre acceso, respeto, trabajo digno y responsabilidad social.
-                <br>
-                <br>
-                El presente EC actualiza al EC0217 “Impartición de cursos de formación del capital humano de manera presencial grupal”, publicado en el Diario Oficial de la Federación el 6 de julio de 2012.
-            </p>
+    <div class="registro">
+        <div class="div-registro">
+            <h1 class="titulo-registro">Registro de Usuario</h1>
         </div>
-        <div>
-            <img src="../assets/administradora.jpg" alt="imagen" class="imagen-principal">
+        <div class="input-registro">
+            <input-vue
+            placeholderInput="Ingresa tu nombre"
+            titulo="Nombre*" 
+            />
+            <input-vue
+            placeholderInput="Ingresa tu correo electronico"
+            titulo="Correo electronico*"
+            class="input-correo" 
+            />
+            <input-vue
+            placeholderInput="Ingresa tu número telefonico"
+            titulo="Telefono*"
+            />
+            <label class="label-select" for="">¿Con que perfil laboral te identificas?</label>
+            <select  class="select" name="" id="">
+                <option value="" hidden>Selecciona una opción</option>
+                <option value="">Soy dueño de negocio</option>
+                <option value="">Soy instructor</option>
+                <option value="">Soy docente</option>
+                <option value="">Soy profesional independiente</option>
+                <option value="">Otro</option>
+            </select>
+            <div class="contenedor-b-registro">
+                <button-vue
+                texto="Enviar"
+                class="button-registro"
+                />
+            </div>
         </div>
-    </div>
-     <div class="button">
-        <button-vue
-        texto="!Ver todos los cursos¡" 
-        />
     </div>
     <footer-vue />
-  </main>
+  </div>
 </template>
 
 <script>
-import barraVue from '../components/barra.vue'
 import buttonVue from '../components/button.vue'
 import footerVue from '../components/footer.vue'
 import headerVue from '../components/header.vue'
+import inputVue from '../components/input.vue'
+import barraVue from '../components/barra.vue'
 
 export default {
     components: {
-        barraVue,
         buttonVue,
         headerVue,
         footerVue,
+        inputVue,
+        barraVue,
     },
 }
 </script>
@@ -48,43 +63,82 @@ export default {
 body {
     margin: 0;
 }
-.lineas {
-    border-radius: 2px;
-    height: 2px;
-    background-color: black;
+.titulo-registro {
+    background-color: #021373;
+    color: white;
+    margin: 0;
 }
-.button {
-    margin-bottom: 20px;
-    text-align: center;
+.input-registro {
+    border: 1px solid gray;
 }
-
+.select {
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  border: transparent;
+  background: #f7f7f7;
+  padding-left: 11px;
+  outline: none;
+  height: 49px;
+  color: #686464;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.input-registro {
+    padding-top: 10px;
+}
 
 @media (max-width: 776px) {
-  .texto-informativo {
+  .registro {
     width: 90%;
     margin: auto;
-    text-align: justify;
+    height: 495px;
   }
-  .titulo-informativo {
-    text-align: initial;
+  .titulo-registro {
+    text-align: center;
   }
-  .imagen-principal {
-    width: -moz-available;
+  .select {
+    display: block;
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .label-select {
+    margin-left: 12px;
+  }
+  .button-registro {
+    width: 190px;
+    margin-bottom: 10px;
+  }
+  .contenedor-b-registro {
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media (min-width: 1024px) {
-    .contenedor-informativo {
-        display: flex;
-        height: 436px;
+    .input-registro {
+        padding: 30px;
+        display: grid;
     }
-    .texto-informativo {
-        height: 311px;
-        width: 64%;
+    .contenedor-input {
+        display: grid;
     }
-    .imagen-principal {
-        margin-top: 23px;
+    .registro {
+        width: 60%;
+        padding-left: 20px;
+        height: 709px;
     }
+    .titulo-registro {
+        padding-left: 30px;
+    }
+    .button-registro {
+        float: right;
+        width: 265px;
+        
+    }
+    
+    
 
 }
 </style>
