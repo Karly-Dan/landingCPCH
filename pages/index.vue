@@ -1,7 +1,6 @@
 <template>
   <div>
     <header-vue />
-    <barra-vue />
     <div class="registro">
         <div class="div-registro">
             <h1 class="titulo-registro">Registro de Usuario</h1>
@@ -46,7 +45,6 @@ import buttonVue from '../components/button.vue'
 import footerVue from '../components/footer.vue'
 import headerVue from '../components/header.vue'
 import inputVue from '../components/input.vue'
-import barraVue from '../components/barra.vue'
 
 export default {
     components: {
@@ -54,7 +52,6 @@ export default {
         headerVue,
         footerVue,
         inputVue,
-        barraVue,
     },
 }
 </script>
