@@ -1,5 +1,5 @@
 <template>
-  <button>{{texto}}</button>
+  <button class="button">{{texto}}</button>
 </template>
 
 <script>
@@ -15,21 +15,31 @@ export default {
 
 <style>
 button {
-    color: white; 
-    border: transparent;
-    background-color: #006192;
+    color: #0d0d0d; 
+    border: 2px solid #021373;
+    background-color: white;
     cursor: pointer;
     border-radius: 3px;
     margin-top: 20px;
-    width: 185px;
     height: 45px;
     letter-spacing: 4.6px;
     padding: 5px;
     text-align: center;
     border-radius: 23.5px;
-    margin: auto;
-    margin-top: auto;
-    margin-top: 10px;
 
+}
+
+
+@media (max-width: 776px) {
+    .button {
+        margin-top: 19px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .button {
+        margin-top: 5px;
+    }
 }
 </style>
