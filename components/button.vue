@@ -1,5 +1,7 @@
 <template>
-  <button class="button">{{texto}}</button>
+  <button class="button">
+    {{texto}}
+</button>
 </template>
 
 <script>
