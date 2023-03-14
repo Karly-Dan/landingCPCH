@@ -124,7 +124,7 @@ body {
     .registro {
         width: 60%;
         padding-left: 20px;
-        height: 709px;
+        height: 595px;
     }
     .titulo-registro {
         padding-left: 30px;
