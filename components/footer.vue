@@ -19,7 +19,6 @@
 
 <script>
 export default {
-
 }
 </script>
 
@@ -37,16 +36,23 @@ export default {
 @media (min-width: 1024px) {
   .contenido-direccion {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   .direccion, .privacidad {
     border-right: 2px solid white ;
     border-left: 2px solid white;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .numero {
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .redes {
     padding-bottom: 10px;
+  }
+  .contenedor-footer {
+    margin-top: 66px;
   }
 }
 </style>
