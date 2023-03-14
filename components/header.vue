@@ -114,6 +114,9 @@ li:hover {
     text-align: center;
     font-size: 12px;
   }
+  .contenedor-menu {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -128,5 +131,8 @@ li:hover {
     .contenedor-menu {
         display: none;
     }
+    .contenedor-menu {
+    display: none;
+  }
 }
 </style>
