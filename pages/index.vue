@@ -8,28 +8,32 @@
         <div class="input-registro">
             <input-vue
             placeholderInput="Ingresa tu nombre"
-            titulo="Nombre*" 
+            titulo="Nombre*"
+            v-model="form.name"
             />
             <input-vue
             placeholderInput="Ingresa tu correo electronico"
             titulo="Correo electronico*"
-            class="input-correo" 
+            class="input-correo"
+            v-model="form.email"
             />
             <input-vue
             placeholderInput="Ingresa tu número telefonico"
             titulo="Telefono*"
+            v-model="form.phone"
             />
             <label class="label-select" for="">¿Con que perfil laboral te identificas?</label>
-            <select  class="select" name="" id="">
+            <select  class="select" name="" id="" v-model="form.jobProfile">
                 <option value="" hidden>Selecciona una opción</option>
-                <option value="">Soy dueño de negocio</option>
-                <option value="">Soy instructor</option>
-                <option value="">Soy docente</option>
-                <option value="">Soy profesional independiente</option>
-                <option value="">Otro</option>
+                <option value="Soy dueño de negocio">Soy dueño de negocio</option>
+                <option value="Soy instructor">Soy instructor</option>
+                <option value="Soy docente">Soy docente</option>
+                <option value="Soy profesional independiente">Soy profesional independiente</option>
+                <option value="Otro">Otro</option>
             </select>
             <div class="contenedor-b-registro">
                 <button-vue
+                @click="sendForm"
                 texto="Enviar"
                 class="button-registro"
                 />
@@ -45,6 +49,9 @@ import buttonVue from '../components/button.vue'
 import footerVue from '../components/footer.vue'
 import headerVue from '../components/header.vue'
 import inputVue from '../components/input.vue'
+import { firestore } from '../plugins/firebase'
+import { doc, setDoc } from 'firebase/firestore'
+import Swal from 'sweetalert2'
 
 export default {
     components: {
@@ -52,6 +59,30 @@ export default {
         headerVue,
         footerVue,
         inputVue,
+    },
+    data: function () {
+        return {
+            form: {
+                name: '',
+                phone: '',
+                email: '',
+                jobProfile: '',
+            },
+        }
+    },
+    methods: {
+        async sendForm() {
+            const ref = doc(firestore, 'leads', self.crypto.randomUUID())
+            await setDoc(ref, this.form)
+            Swal.fire({
+                title: 'Recibimos tus datos',
+                text: 'Pronto te contactaremos',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#D90404'
+            })
+            .then(() => window.location.href = 'https://cpcapitalhumano.com.mx')
+        },
     },
 }
 </script>
