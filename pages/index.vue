@@ -3,7 +3,7 @@
     <header-vue />
     <div class="registro">
         <div class="div-registro">
-            <h1 class="titulo-registro">Registro de Usuario</h1>
+            <h1 class="titulo-registro">Contactanos</h1>
         </div>
         <div class="input-registro">
             <input-vue
@@ -60,6 +60,9 @@ export default {
 body {
     margin: 0;
 }
+div {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .titulo-registro {
     background-color: #021373;
     color: white;
@@ -111,6 +114,7 @@ body {
     display: flex;
     justify-content: center;
   }
+  
 }
 
 @media (min-width: 1024px) {
@@ -122,9 +126,10 @@ body {
         display: grid;
     }
     .registro {
-        width: 60%;
-        padding-left: 20px;
+        width: 30%;
+        margin: auto;
         height: 595px;
+        margin-top: 35px;
     }
     .titulo-registro {
         padding-left: 30px;
