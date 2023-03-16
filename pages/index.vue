@@ -32,7 +32,7 @@
                 <option value="Otro">Otro</option>
             </select>
             <input-vue
-            titulo="Escribe aqui tu respuesta"
+            titulo="Con que otro perfil laboral te identificas"
             v-show="form.jobProfile === 'Otro'"
             />
             <label class="label-select" for="">Selecciona el estándar de tu interés</label>
