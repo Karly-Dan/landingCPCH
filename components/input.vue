@@ -1,7 +1,7 @@
 <template>
   <div class="contenedor-input">
     <label class="label" for="">{{ titulo }}</label>
-    <input type="text"  :placeholder="placeholderInput" class="input-base">
+    <input type="text"  :placeholder="placeholderInput" class="input-base" @input="$emit('update', $event.target.value)" :value="value">
   </div>
 </template>
 
@@ -16,6 +16,14 @@ export default {
       type: String,
       default: '',
     },
+    value: {
+      type: String,
+      default: '',
+    },
+  },
+  model: {
+    prop: 'value',
+    event: 'update',
   },
 }
 </script>
