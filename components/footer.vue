@@ -32,6 +32,11 @@ export default {
   filter: invert(100%) sepia(6%) saturate(7433%) hue-rotate(241deg) brightness(114%) contrast(91%);
 }
 
+@media (max-width: 776px){
+  .contenedor-footer {
+    padding-top: 2px;
+  }
+}
 
 @media (min-width: 1024px) {
   .contenido-direccion {
