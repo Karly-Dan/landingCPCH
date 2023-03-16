@@ -31,6 +31,13 @@
                 <option value="Soy profesional independiente">Soy profesional independiente</option>
                 <option value="Otro">Otro</option>
             </select>
+            <label class="label-select" for="">Selecciona el estándar de tu interés</label>
+            <select  class="select" name="" id="">
+                <option value="" hidden>Selecciona una opción</option>
+                <option value="Soy dueño de negocio">ECO127.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
+                <option value="Soy instructor">ECO154 Prestación de los servicios de limpieza</option>
+                <option value="Soy docente">Microsoft</option>
+            </select>
             <div class="contenedor-b-registro">
                 <button-vue
                 @click="sendForm"
