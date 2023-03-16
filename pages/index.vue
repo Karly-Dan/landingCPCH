@@ -130,7 +130,7 @@ div {
   .registro {
     width: 90%;
     margin: auto;
-    height: 570px;
+    height: 600px;
   }
   .titulo-registro {
     text-align: center;
