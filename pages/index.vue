@@ -31,6 +31,10 @@
                 <option value="Soy profesional independiente">Soy profesional independiente</option>
                 <option value="Otro">Otro</option>
             </select>
+            <input-vue
+            titulo="Escribe aqui tu respuesta"
+            v-show="form.jobProfile === 'Otro'"
+            />
             <label class="label-select" for="">Selecciona el estándar de tu interés</label>
             <select  class="select" name="" id="">
                 <option value="" hidden>Selecciona una opción</option>
@@ -130,7 +134,7 @@ div {
   .registro {
     width: 90%;
     margin: auto;
-    height: 600px;
+    height: 700px;
   }
   .titulo-registro {
     text-align: center;
@@ -155,6 +159,36 @@ div {
   
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo-c {
+        height: 130px;
+    }
+    .contenedor-input {
+        display: grid;
+    }
+    .registro {
+        width: 50%;
+        margin: auto;
+        height: 768px;
+        margin-top: 50px;
+    }
+    .input-registro {
+        display: grid;
+        padding: 15px;
+        height: 560px;
+    }
+    .contenedor-b-registro {
+        display: flex;
+        justify-content: center;
+    }
+    .titulo-registro {
+        padding-left: 15px;
+    }
+    
+    
+  
+}
+
 @media (min-width: 1024px) {
     .input-registro {
         padding: 30px;
@@ -176,6 +210,10 @@ div {
         float: right;
         width: 265px;
         
+    }
+    .contenedor-b-registro {
+        display: flex;
+        justify-content: center;
     }
     
     
