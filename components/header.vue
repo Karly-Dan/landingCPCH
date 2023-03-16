@@ -2,28 +2,29 @@
   <header>
     <div class="contenedor-header">
         <div class="div-czya">
-            <img src="../assets/logoCZYA2.jpeg" alt="">
+            <img src="../assets/logoCZYA.jpg" alt="" class="logo-c">
         </div>
         <nav class="contenedor-menu">
             <input type="checkbox" id="menu" class="input-menu">
-            <label class="label-menu" for="menu"> <img src="../assets/menu.png" alt="" style="filter: invert(100%) sepia(6%) saturate(7433%) hue-rotate(241deg) brightness(114%) contrast(91%);"> </label>
+            <label class="label-menu" for="menu"> <img src="../assets/menu.png" alt=""  class="menu-lista" style="filter: invert(100%) sepia(6%) saturate(7433%) hue-rotate(241deg) brightness(114%) contrast(91%);"> </label>
             <ul>
-                <li>Acerca de nosotros</li>
-                <li>Contacto</li>
-                <li>Mision y Vision</li>
-                <li>Servicios</li>
+                <li><a href="/acercaDeNosotros"></a>Acerca de nosotros</li>
+                <li><a href="/contacto"></a>Contacto</li>
+                <li><a href="/misionVision"></a>Mision y Vision</li>
+                <li><a href="/servicios"></a>Servicios</li>
             </ul>
         </nav>
     </div>
     <div class="contenedor">
         <div class="div-cpch">
-            <img src="../assets/logocpch.jpeg" alt="">
+            <img src="../assets/logoCPCH.jpg" alt="" class="logo-capitalhumano">
+            <img src="../assets/logoCZYA.jpg" alt="" class="logo-conde">
         </div>
         <div>
             <h1 class="titulo-cpch">CENTRO DE PROFESIONALIZACIÓN DE CAPITAL HUMANO</h1>
         </div>
         <div class="div-redconocer">
-            <img src="../assets/index-2.png" alt="">
+            <img src="../assets/logoRC.jpg" alt="" class="logo-red">
         </div>
     </div>
   </header>
@@ -37,7 +38,11 @@
     background-color: #021373;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+
+}
+.contenedor {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
 }
 .div-cpch {
     background-color: white;
@@ -50,6 +55,9 @@
     background-color: #021373;
     position: absolute;
 }
+.menu-lista {
+  padding-top: 8px;
+}
 .a-menu {
     color: white;
     text-decoration: none;
@@ -57,19 +65,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-
-
 ul{
   display: none;
 }
-
 input:checked  ~ ul{
   display:block;
   margin-top: 32px;
-
 }
-
 .input-menu {
   display: none;
 }
@@ -84,12 +86,10 @@ input:checked  ~ ul{
   float: right;
   padding-right: 40px;
 }
-
 ul{
   margin-top:0;
   padding: 0;
   width: 200px;
-
 }
 li {
   display: block;
@@ -101,11 +101,9 @@ li {
   color: white;
   float: inline-end;
 }
-
 li:hover {
   filter: brightness(110%);
 }
-
 @media (max-width: 776px) {
   .contenedor {
     display: flex;
@@ -114,25 +112,54 @@ li:hover {
     text-align: center;
     font-size: 12px;
   }
-  .contenedor-menu {
+  .contenedor {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  }
+  .logo-conde {
     display: none;
+  }
+  .logo-red {
+      height: 77px;
+  }
+  .logo-c {
+    height: 50px;
+  }
+  .logo-capitalhumano {
+  height: 90px;  
   }
 }
 
 @media (min-width: 1024px) {
     .contenedor {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
     }
     .titulo-cpch {
     text-align: center;
     font-size: 20px;
-    }
-    .contenedor-menu {
-        display: none;
+    padding-top: 20px;
     }
     .contenedor-menu {
     display: none;
-  }
+    }
+    .contenedor {
+    margin-bottom: 20px;
+    }
+    .contenedor-header {
+      display: none;
+    }
+    .logo-conde {
+      width: 176px;
+      padding: 15px;
+    }
+    .logo-red {
+      height: 102px;
+    }
+    .logo-capitalhumano {
+      padding: 4px;
+      height: 102px;
+    }
 }
 </style>
