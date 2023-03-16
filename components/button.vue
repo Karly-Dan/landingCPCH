@@ -28,6 +28,7 @@ button {
     padding: 5px;
     text-align: center;
     border-radius: 23.5px;
+    width: 210px;
 
 }
 
