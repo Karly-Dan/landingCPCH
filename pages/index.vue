@@ -33,7 +33,9 @@
             </select>
             <input-vue
             titulo="Con que otro perfil laboral te identificas"
+            placeholderInput="Ingresa tu perfil laboral"
             v-show="form.jobProfile === 'Otro'"
+            v-model="form.otherJobProfile"
             />
             <label class="label-select" for="">Selecciona el estándar de tu interés</label>
             <select  class="select" name="" id="">
@@ -78,6 +80,7 @@ export default {
                 phone: '',
                 email: '',
                 jobProfile: '',
+                otherJobProfile: '',
             },
         }
     },
