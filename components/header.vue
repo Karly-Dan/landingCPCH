@@ -24,7 +24,7 @@
             <h1 class="titulo-cpch">CENTRO DE PROFESIONALIZACIÓN DE CAPITAL HUMANO</h1>
         </div>
         <div class="div-redconocer">
-            <img src="../assets/logoRC.jpg" alt="" class="logo-red">
+            <img src="../assets/logoRC.jpeg" alt="" class="logo-red">
         </div>
     </div>
   </header>
