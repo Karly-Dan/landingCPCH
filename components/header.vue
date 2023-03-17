@@ -129,6 +129,9 @@ li:hover {
   .logo-capitalhumano {
   height: 90px;  
   }
+  .contenedor-header {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -146,14 +149,18 @@ li:hover {
       text-align: center;
     }
     .logo-conde {
-      display: none;
+      height: 80px;
+      padding: 15px;
     }
     .contenedor-header {
       display: none;
+    } 
+    .div-cpch {
+      display: contents;
     }
-    
-
-  
+    .titulo-cpch {
+      font-size: 20px;
+    }
 }
 
 @media (min-width: 1024px) {
