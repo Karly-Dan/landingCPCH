@@ -197,10 +197,12 @@ div {
 @media (min-width: 1024px) {
     .input-registro {
         padding: 30px;
-        display: grid;
+        display: flex;
+        flex-direction: column;
     }
     .contenedor-input {
-        display: grid;
+        display: flex;
+        flex-direction: column;
     }
     .registro {
         width: 30%;
