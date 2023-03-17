@@ -167,7 +167,8 @@ div {
         height: 130px;
     }
     .contenedor-input {
-        display: grid;
+        display: flex;
+        flex-direction: column;
     }
     .registro {
         width: 50%;
@@ -176,9 +177,10 @@ div {
         margin-top: 50px;
     }
     .input-registro {
-        display: grid;
         padding: 15px;
         height: 560px;
+        display: flex;
+        flex-direction: column;
     }
     .contenedor-b-registro {
         display: flex;
