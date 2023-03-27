@@ -1,7 +1,4 @@
 export default {
-  googleAnalytics: {
-    id: 'G-T6TQ10CEBE',
-  },
   server: {
     port: 3002 // default: 3000
   },
@@ -41,10 +38,20 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'vue-sweetalert2/nuxt',
-    '@nuxtjs/google-analytics',
+    '@nuxtjs/gtm',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  // Google Tag Manager
+  gtm: {
+    id: process.env.GOOGLE_TAG_MANAGER_ID
+  },
+  //
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID
+    }
+  },
 }
