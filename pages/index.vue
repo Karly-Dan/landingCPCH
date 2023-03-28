@@ -40,7 +40,7 @@
             <label class="label-select" for="">Selecciona el estándar de tu interés</label>
             <select  class="select" name="" id="" v-model="form.standard">
                 <option value="" hidden>Selecciona una opción</option>
-                <option value="ECO127.01 Impartición de cursos de formación del capital humano de manera presencial grupal">ECO127.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
+                <option value="ECO217.01 Impartición de cursos de formación del capital humano de manera presencial grupal">ECO217.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
                 <option value="ECO154 Prestación de los servicios de limpieza">ECO154 Prestación de los servicios de limpieza</option>
                 <option value="Microsoft">Microsoft</option>
             </select>
