@@ -38,11 +38,11 @@
             v-model="form.otherJobProfile"
             />
             <label class="label-select" for="">Selecciona el estándar de tu interés</label>
-            <select  class="select" name="" id="">
+            <select  class="select" name="" id="" v-model="form.standard">
                 <option value="" hidden>Selecciona una opción</option>
-                <option value="Soy dueño de negocio">ECO127.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
-                <option value="Soy instructor">ECO154 Prestación de los servicios de limpieza</option>
-                <option value="Soy docente">Microsoft</option>
+                <option value="ECO127.01 Impartición de cursos de formación del capital humano de manera presencial grupal">ECO127.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
+                <option value="ECO154 Prestación de los servicios de limpieza">ECO154 Prestación de los servicios de limpieza</option>
+                <option value="Microsoft">Microsoft</option>
             </select>
             <div class="contenedor-b-registro">
                 <button-vue
@@ -81,12 +81,14 @@ export default {
                 email: '',
                 jobProfile: '',
                 otherJobProfile: '',
+                standard: '',
             },
         }
     },
     methods: {
         async sendForm() {
             const ref = doc(firestore, 'leads', self.crypto.randomUUID())
+            this.sendMessageToTelegramGroup()
             await setDoc(ref, this.form)
             Swal.fire({
                 title: 'Recibimos tus datos',
@@ -96,6 +98,17 @@ export default {
                 confirmButtonColor: '#D90404'
             })
             .then(() => window.location.href = 'https://cpcapitalhumano.com.mx')
+        },
+        async sendMessageToTelegramGroup() {
+            await this.$axios.$post(`${this.$config.apiTelegram}/bot${this.$config.accessTokenTelegram}/sendMessage`,{
+                    text: `Nombre: ${this.form.name}\n`
+                        + `Correo: ${this.form.email}\n`
+                        + `Telefono: ${this.form.phone}\n`
+                        + `Perfil laboral: ${this.form.jobProfile}\n`
+                        + `Otro perfil laboral: ${this.form.otherJobProfile}\n`
+                        + `Estandar de interes: ${this.form.standard}\n`,
+                    chat_id: this.$config.chatIdTelegram,
+                })
         },
     },
 }

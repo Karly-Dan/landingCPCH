@@ -39,6 +39,7 @@ export default {
   modules: [
     'vue-sweetalert2/nuxt',
     '@nuxtjs/gtm',
+    '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -52,6 +53,9 @@ export default {
   publicRuntimeConfig: {
     gtm: {
       id: process.env.GOOGLE_TAG_MANAGER_ID
-    }
+    },
+    apiTelegram: process.env.API_TELEGRAM,
+    accessTokenTelegram: process.env.ACCESS_TOKEN_TELEGRAM,
+    chatIdTelegram: process.env.CHAT_ID_TELEGRAM,
   },
 }
