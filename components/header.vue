@@ -2,7 +2,7 @@
   <header>
     <div class="contenedor-header">
         <div class="div-czya">
-            <img src="../assets/logoCZYA.jpg" alt="" class="logo-c">
+            <img src="../assets/logoCZYA.png" alt="" class="logo-c">
         </div>
         <nav class="contenedor-menu">
             <input type="checkbox" id="menu" class="input-menu">
@@ -18,7 +18,7 @@
     <div class="contenedor">
         <div class="div-cpch">
             <img src="../assets/logoCPCH.jpg" alt="" class="logo-capitalhumano">
-            <img src="../assets/logoCZYA.jpg" alt="" class="logo-conde">
+            <img src="../assets/logoCZYA.png" alt="" class="logo-conde">
         </div>
         <div>
             <h1 class="titulo-cpch">CENTRO DE PROFESIONALIZACIÓN DE CAPITAL HUMANO</h1>
