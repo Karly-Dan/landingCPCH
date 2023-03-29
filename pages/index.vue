@@ -44,6 +44,11 @@
                 <option value="ECO154 Prestación de los servicios de limpieza">ECO154 Prestación de los servicios de limpieza</option>
                 <option value="Microsoft">Microsoft</option>
             </select>
+            <div style="display: flex; justify-content: center;">
+                <loading-vue
+                v-show="loading"
+                />
+            </div>
             <div class="contenedor-b-registro">
                 <button-vue
                 @click="sendForm"
@@ -58,6 +63,7 @@
 </template>
 
 <script>
+import loadingVue from '../components/loading.vue'
 import buttonVue from '../components/button.vue'
 import footerVue from '../components/footer.vue'
 import headerVue from '../components/header.vue'
@@ -72,6 +78,7 @@ export default {
         headerVue,
         footerVue,
         inputVue,
+        loadingVue,
     },
     data: function () {
         return {
@@ -83,10 +90,12 @@ export default {
                 otherJobProfile: '',
                 standard: '',
             },
+            loading: false,
         }
     },
     methods: {
         async sendForm() {
+            this.loading = true;
             const ref = doc(firestore, 'leads', self.crypto.randomUUID())
             this.sendMessageToTelegramGroup()
             await setDoc(ref, this.form)
@@ -98,7 +107,9 @@ export default {
                 confirmButtonColor: '#D90404'
             })
             .then(() => window.location.href = 'https://cpcapitalhumano.com.mx')
+            this.loading = false;
         },
+
         async sendMessageToTelegramGroup() {
             await this.$axios.$post(`${this.$config.apiTelegram}/bot${this.$config.accessTokenTelegram}/sendMessage`,{
                     text: `Nombre: ${this.form.name}\n`
@@ -108,9 +119,10 @@ export default {
                         + `Otro perfil laboral: ${this.form.otherJobProfile}\n`
                         + `Estandar de interes: ${this.form.standard}\n`,
                     chat_id: this.$config.chatIdTelegram,
-                })
+                })    
         },
     },
+    
 }
 </script>
 
