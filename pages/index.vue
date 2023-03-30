@@ -109,7 +109,6 @@ export default {
             .then(() => window.location.href = 'https://cpcapitalhumano.com.mx')
             this.loading = false;
         },
-
         async sendMessageToTelegramGroup() {
             await this.$axios.$post(`${this.$config.apiTelegram}/bot${this.$config.accessTokenTelegram}/sendMessage`,{
                     text: `Nombre: ${this.form.name}\n`
@@ -122,7 +121,6 @@ export default {
                 })    
         },
     },
-    
 }
 </script>
 
