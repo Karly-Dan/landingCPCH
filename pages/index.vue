@@ -37,12 +37,25 @@
             v-show="form.jobProfile === 'Otro'"
             v-model="form.otherJobProfile"
             />
-            <label class="label-select" for="">Selecciona el estándar de tu interés</label>
+            <label class="label-select" for="">Certificación o curso de tu interés</label>
             <select  class="select" name="" id="" v-model="form.standard">
                 <option value="" hidden>Selecciona una opción</option>
-                <option value="ECO217.01 Impartición de cursos de formación del capital humano de manera presencial grupal">ECO217.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
-                <option value="ECO154 Prestación de los servicios de limpieza">ECO154 Prestación de los servicios de limpieza</option>
-                <option value="Microsoft">Microsoft</option>
+                <option value="EC0217.01 Impartición de cursos de formación del capital humano de manera presencial grupal">ECO217.01 Impartición de cursos de formación del capital humano de manera presencial grupal.</option>
+                <option value="EC0054 Venta de productos ópticos">EC0054 Venta de productos ópticos</option>
+                <option value="C0305 Prestación de servicios de atención a clientes">EC0305 Prestación de servicios de atención a clientes</option>
+                <option value="EC0435 Prestación de servicios para la atención, cuidado y desarrollo integral de las niñas y los niños en Centros de Atención Infantil">EC0435 Prestación de servicios para la atención, cuidado y desarrollo integral de las niñas y los niños en Centros de Atención Infantil</option>
+                <option value="EC0076 Evaluación de la competencia de candidatos con base en Estándares de Competencia">EC0076 Evaluación de la competencia de candidatos con base en Estándares de Competencia</option>
+                <option value="EC0154 Prestación de los servicios de limpieza">ECO154 Prestación de los servicios de limpieza</option>
+                <option value="Microsoft Excel">Microsoft Excel</option>
+                <option value="Microsoft Word">Microsoft Word</option>
+                <option value="Equipos de alto desempeño">Equipos de alto desempeño</option>
+                <option value="Gestión de residencia en las organizaciones">Gestión de residencia en las organizaciones</option>
+                <option value="Gestión de estrés laboral">Gestión de estrés laboral</option>
+                <option value="Inteligencia emocional en el trabajo">Inteligencia emocional en el trabajo</option>
+                <option value="Gestión del tiempo">Gestión del tiempo</option>
+                <option value="Comunicación asertiva y habilidades sociales">Comunicación asertiva y habilidades sociales</option>
+                <option value="Los 10 colores del talento">Los 10 colores del talento</option>
+                <option value="Diagnóstico de necesidades de capacitación (DNS)">Diagnóstico de necesidades de capacitación (DNS)</option>
             </select>
             <div style="display: flex; justify-content: center;">
                 <loading-vue
