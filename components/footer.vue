@@ -1,18 +1,16 @@
 <template>
   <div class="contenedor-footer">
     <div class="contenido-direccion">
-        <p class="direccion">Av. Camino a la presa #6, San Isidro la Paz, Nicolás Romero, Edo. Méx. C.P. 54477</p>
+        <p class="direccion">Av. Camino a la Presa #6, San Isidro la Paz, Nicolás Romero, Edo. Méx. C.P. 54477</p>
         <p class="numero">55-1254-5494</p>
-        <p class="privacidad">Avisos de Privacidad</p>
+        <a href="/privacidad" class="privacidad">Avisos de Privacidad</a>
     </div>
     <div class="redes">
-        <img src="../assets/whatsapp.png" alt="whats">
-        <img src="../assets/facebook(1).png" alt="facebook">
-        <img src="../assets/twitter.png" alt="twiter">
-        <img src="../assets/instagram.png" alt="">
-        <img src="../assets/google-mas.png" alt="google">
-        <img src="../assets/linkedin.png" alt="linked">
-        <img src="../assets/youtube(1).png" alt="youtube">
+        <a href="https://web.whatsapp.com/" target="_blank"><img src="../assets/whatsapp.png" alt="whats"></a>
+        <a href="https://www.facebook.com/people/Centro-de-Profesionalizaci%C3%B3n-de-Capital-Humano/100086499862025/?mibextid=ZbWKwL" target="_blank"><img src="../assets/facebook(1).png" alt="facebook"></a>
+        <a href="https://www.instagram.com/cpch._/?igshid=ZDdkNTZiNTM%3D" target="_blank"><img src="../assets/instagram.png" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCfPQmFWnZgEi5mCsbMowUBA" target="_blank"><img src="../assets/youtube(1).png" alt="youtube"></a>
+        <a href="mailto:microsoft@cpcapitalhumano.com.mx" target="_blank"><img src="../assets/gmail.png" alt="gmail"></a>
     </div>
   </div>
 </template>
@@ -27,35 +25,23 @@ export default {
     background-color: #021373;
     color: white;
     text-align: center;
+    padding-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 .redes {
   filter: invert(100%) sepia(6%) saturate(7433%) hue-rotate(241deg) brightness(114%) contrast(91%);
+  cursor: pointer;
 }
-
-@media (max-width: 776px){
+.privacidad {
+  color: white;
+}
+.redes {
+  margin-top: 15px;
+}
+@media (max-width: 776px) {
   .contenedor-footer {
     padding-top: 2px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .direccion {
-    padding-top: 10px;
-  }
-  
-}
-
-
-@media (min-width: 1024px) {
-  .contenido-direccion {
-    display: flex;
-    justify-content: center;
-  }
-  .direccion, .privacidad {
-    border-right: 2px solid white ;
-    border-left: 2px solid white;
-    padding-left: 12px;
-    padding-right: 12px;
   }
   .numero {
     padding-left: 12px;
@@ -64,8 +50,28 @@ export default {
   .redes {
     padding-bottom: 10px;
   }
-  .contenedor-footer {
-    margin-top: 66px;
+  .direccion {
+    padding: 4px;
   }
 }
+@media (min-width: 1024px){
+    .direccion, .privacidad {
+    border-right: 2px solid white ;
+    border-left: 2px solid white;
+    padding-left: 12px;
+    padding-right: 12px;
+    }
+    .numero {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .contenido-direccion {
+      display: flex;
+      justify-content: center;
+    }
+    .privacidad {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
 </style>
