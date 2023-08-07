@@ -8,17 +8,16 @@
             <input type="checkbox" id="menu" class="input-menu">
             <label class="label-menu" for="menu"> <img src="../assets/menu.png" alt=""  class="menu-lista" style="filter: invert(100%) sepia(6%) saturate(7433%) hue-rotate(241deg) brightness(114%) contrast(91%);"> </label>
             <ul>
-                <li><a href="/acercaDeNosotros"></a>Acerca de nosotros</li>
-                <li><a href="/contacto"></a>Contacto</li>
-                <li><a href="/misionVision"></a>Mision y Vision</li>
-                <li><a href="/servicios"></a>Servicios</li>
+                <li class="m-l"><a href="/acercaDeNosotros"></a>Acerca de nosotros</li>
+                <li class="m-l"><a href="/contacto"></a>Contacto</li>
+                <li class="m-l"><a href="/misionVision"></a>Mision y Vision</li>
+                <li class="m-l"><a href="/servicios"></a>Servicios</li>
             </ul>
         </nav>
     </div>
     <div class="contenedor">
         <div class="div-cpch">
             <img src="../assets/logoCPCH.jpg" alt="" class="logo-capitalhumano">
-            <img src="../assets/logoCZYA.png" alt="" class="logo-conde">
         </div>
         <div>
             <h1 class="titulo-cpch">CENTRO DE PROFESIONALIZACIÓN DE CAPITAL HUMANO</h1>
@@ -91,7 +90,7 @@ ul{
   padding: 0;
   width: 200px;
 }
-li {
+.m-l {
   display: block;
   background: #021373;
   margin: 0;
@@ -165,8 +164,8 @@ li:hover {
 
 @media (min-width: 1024px) {
     .contenedor {
-        display: flex;
-        justify-content: center;
+      display: flex;
+      justify-content: space-around;
     }
     .titulo-cpch {
     text-align: center;
