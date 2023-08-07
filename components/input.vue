@@ -1,8 +1,8 @@
 <template>
-  <div class="contenedor-input">
-    <label class="label" for="">{{ titulo }}</label>
-    <input type="text"  :placeholder="placeholderInput" class="input-base" @input="$emit('update', $event.target.value)" :value="value">
-  </div>
+    <div class="contenedor-input">
+      <label class="label" for="">{{ titulo }}</label>
+        <input type="text" :placeholder="placeholderInput" class="input-base" @input="$emit('update', $event.target.value)" :value="value">
+    </div>
 </template>
 
 <script>
@@ -41,8 +41,8 @@ export default {
   color: #686464;
   margin-top: 5px;
 }
-.contenedor-input {
-  margin-bottom: 10px;
+label {
+  margin-top: 10px;
 }
 
 
