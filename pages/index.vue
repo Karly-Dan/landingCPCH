@@ -169,7 +169,7 @@ div {
     margin: 0;
 }
 .input-registro {
-    border: 1px solid gray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .select {
   cursor: pointer;
@@ -249,9 +249,6 @@ div {
     .titulo-registro {
         padding-left: 15px;
     }
-    
-    
-  
 }
 
 @media (min-width: 1024px) {
@@ -282,8 +279,5 @@ div {
         display: flex;
         justify-content: center;
     }
-    
-    
-
 }
 </style>
