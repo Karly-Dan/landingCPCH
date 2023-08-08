@@ -41,9 +41,6 @@ export default {
   color: #686464;
   margin-top: 5px;
 }
-label {
-  margin-top: 10px;
-}
 
 
 
