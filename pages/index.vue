@@ -1,27 +1,40 @@
 <template>
   <div>
     <header-vue />
+    <ValidationObserver v-slot="{ handleSubmit }">
     <div class="registro">
         <div class="div-registro">
             <h1 class="titulo-registro">Contactanos</h1>
         </div>
         <div class="input-registro">
-            <input-vue
-            placeholderInput="Ingresa tu nombre"
-            titulo="Nombre*"
-            v-model="form.name"
-            />
-            <input-vue
-            placeholderInput="Ingresa tu correo electronico"
-            titulo="Correo electronico*"
-            class="input-correo"
-            v-model="form.email"
-            />
-            <input-vue
-            placeholderInput="Ingresa tu número telefonico"
-            titulo="Telefono*"
-            v-model="form.phone"
-            />
+            <ValidationProvider rules="letras|requerido" v-slot="{ errors }">
+                <input-vue
+                placeholderInput="Ingresa tu nombre"
+                titulo="Nombre*"
+                v-model="form.name"
+                />
+                <span class="mensaje">{{ errors[0] }}</span>
+            </ValidationProvider>
+
+            <ValidationProvider rules="requerido|correo" v-slot="{ errors }">
+                <input-vue
+                placeholderInput="Ingresa tu correo electronico"
+                titulo="Correo electronico*"
+                class="input-correo"
+                v-model="form.email"
+                />
+                <span class="mensaje">{{ errors[0] }}</span>
+            </ValidationProvider>
+
+            <ValidationProvider rules="numeros|longitud:12|requerido" v-slot="{ errors }">
+                <input-vue
+                placeholderInput="Ingresa tu número telefonico"
+                titulo="Telefono*"
+                v-model="form.phone"
+                />
+                <span class="mensaje">{{ errors[0] }}</span>
+            </ValidationProvider>
+
             <label class="label-select" for="">¿Con que perfil laboral te identificas?</label>
             <select  class="select" name="" id="" v-model="form.jobProfile">
                 <option value="" hidden>Selecciona una opción</option>
@@ -64,7 +77,7 @@
             </div>
             <div class="contenedor-b-registro">
                 <button-vue
-                @click="sendForm"
+                @click="handleSubmit(sendForm)"
                 texto="Enviar"
                 class="button-registro"
                 />
@@ -72,6 +85,7 @@
         </div>
     </div>
     <footer-vue />
+    </ValidationObserver>
   </div>
 </template>
 
@@ -84,6 +98,8 @@ import inputVue from '../components/input.vue'
 import { firestore } from '../plugins/firebase'
 import { doc, setDoc } from 'firebase/firestore'
 import Swal from 'sweetalert2'
+import { ValidationProvider } from 'vee-validate'
+import { ValidationObserver } from 'vee-validate'
 
 export default {
     components: {
@@ -92,6 +108,9 @@ export default {
         footerVue,
         inputVue,
         loadingVue,
+        ValidationProvider,
+        ValidationObserver,
+
     },
     data: function () {
         return {
@@ -168,6 +187,11 @@ div {
 .input-registro {
     padding-top: 10px;
 }
+.mensaje {
+    font-size: 12px;
+    color: red;
+    margin-left: 10px;
+}
 
 @media (max-width: 776px) {
   .registro {
@@ -186,6 +210,7 @@ div {
   }
   .label-select {
     margin-left: 12px;
+    display: flex;
   }
   .button-registro {
     width: 190px;
@@ -214,7 +239,6 @@ div {
     }
     .input-registro {
         padding: 15px;
-        height: 560px;
         display: flex;
         flex-direction: column;
     }
@@ -232,7 +256,7 @@ div {
 
 @media (min-width: 1024px) {
     .input-registro {
-        padding: 30px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
     }
@@ -243,7 +267,7 @@ div {
     .registro {
         width: 30%;
         margin: auto;
-        height: 595px;
+        height: 750px;
         margin-top: 35px;
     }
     .titulo-registro {
